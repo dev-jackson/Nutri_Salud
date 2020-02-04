@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!---<link rel="stylesheet" href="../assets/css/style.css">--->
     <title>Planes</title>
 </head>
 <body>
-    
-    <head><?php include "../view/plantillas/header.php";?> </head>
-    
+    <?php include_once "../view/plantillas/header.php";?>
+    <section id="inicio">
     <div class="container-table">
     <h1>PLANES DISPONIBLES</h1>
     <table>
@@ -34,5 +34,6 @@
         </tbody>
     </table>
     </div>
+    </section>
 </body>
 </html>
