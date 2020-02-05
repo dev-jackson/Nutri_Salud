@@ -7,7 +7,7 @@ class IndexController {
     }
     public function iniciar(){
         require_once HEADER;
-        require_once './view/inicio.php';
+        require_once 'view/inicio.php';
         require_once FOOTER;
         
     }
@@ -16,6 +16,11 @@ class IndexController {
         require_once HEADER;
         require_once 'view/estaticas/'.$pagina.'.php';
         require_once FOOTER;
+    }
+    public function login(){
+        
+        require_once 'view/estaticas/login.php';
+        
     }
 
 }
