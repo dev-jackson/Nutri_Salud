@@ -7,6 +7,7 @@
         <!-- Bootstrap CSS -->
         <!---<link rel="stylesheet" href="assets/css/bootstrap.min.css" >--->
         <link rel="stylesheet" href="./assets/css/inicio.css">
+        <link rel="stylesheet" href="./assets/css/index.css">
         <title>Nutricionista</title>
     </head>
     <body>
@@ -14,7 +15,7 @@
     <a href="#" class="icon"><img src="./assets/imagenes/logo.png" alt="" width="45px"></a>
     <ul>
         <li><a href="index.php?" class="active">INICIO</a></li>
-        <li><a href="#">PLANES</a></li>
+        <li><a href="index.php?c=index&a=dinamica&p=planes">PLANES</a></li>
         <li><a href="index.php?c=index&a=estatica&p=nosotros">NOSOTROS</a></li>
         <li><a href="index.php?c=index&a=login">LOGIN</a></li>
     </ul>

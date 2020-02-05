@@ -59,3 +59,6 @@
 .menu ul li:hover{
     background: teal;
 }
+.container-table{
+    padding: 90px 60px;
+}

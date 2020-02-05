@@ -1,7 +1,3 @@
-<?php include "../model/DAO/PlanesDAO.php";
- include "../model/DAO/Planes.php";?>
-    <?php include_once "../view/plantillas/header.php";?>
-    <section id="inicio">
     <div class="container-table">
     <h1>PLANES DISPONIBLES</h1>
     <table>
@@ -12,8 +8,7 @@
 				</tr>
 			</thead>
             <?php 
-                $p = new PlanesDAO();
-                foreach($p->getPlanesAll() as $gp):
+                foreach($resultado as $gp):
             ?>
             <tr>
                     <td><?php echo($gp['nombre']); ?></td>
@@ -24,4 +19,3 @@
         </tbody>
     </table>
     </div>
-    </section>

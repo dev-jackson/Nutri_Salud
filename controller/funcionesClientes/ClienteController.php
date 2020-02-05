@@ -14,6 +14,7 @@ class ClienteController {
         require_once HEADER ;
         //falta vista
         $resultado = $this->planes->getAllPlanes();
+        header('Location:index.php?c=Cliente&a=mostrarPlanes');
         require_once FOOTER;
     }
 

@@ -22,5 +22,10 @@ class IndexController {
         require_once 'view/estaticas/login.php';
         
     }
+    public function dinamica(){
+        $pagina = $_REQUEST['p'];
+        require_once HEADER;
+        require_once 'view/dinamicas/'.$pagina.'.php';
+    }
 
 }
