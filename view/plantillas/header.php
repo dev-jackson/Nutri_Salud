@@ -16,7 +16,7 @@
         <li><a href="../view/inicio.php" class="active">INICIO</a></li>
         <li><a href="../view/planes.php">PLANES</a></li>
         <li><a href="#">INFROMACION</a></li>
-        <li><a href="#">LOGIN</a></li>
+        <li><a href="../view/login.php">LOGIN</a></li>
     </ul>
     <div class="respon" onclick="toogle()"><img src="assets/imagenes/logo.png" alt="" width="30px"></div>
         </header>

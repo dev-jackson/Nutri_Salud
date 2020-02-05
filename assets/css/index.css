@@ -2,6 +2,27 @@
     margin: 0;
     padding: 0;
 }
+.container-login{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 7% 30%;
+    background-image: url("../imagenes/fondoLogin.jpeg");
+    background-size: cover;
+}
+.container-login form{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background: rgba(255, 255, 255, 0.87);
+    padding: 4%;
+    border-radius: 25px;
+    margin: 40px;
+}
+.container-login form img{
+    width: 62px;
+    margin:20px;
+}
 .logimage{
     padding: 0px;
     margin: 0px;
