@@ -2,7 +2,7 @@
 
 //rutas generales
 define("SERVIDOR","localhost");
-define("NOMBREAPP","Proyecto2par");
+define("NOMBREAPP","Nutri_Salud");
 define("RUTAAPP","http://".SERVIDOR."/".NOMBREAPP);
 
 //RUTA RECURSOS
