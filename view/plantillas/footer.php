@@ -14,7 +14,7 @@
     
 </head>
 	<body>
-        <!--- solo eso are hasta hoy pelado -->
+       
 		<footer class="footer-distributed">
  
 			<div class="footer-left">

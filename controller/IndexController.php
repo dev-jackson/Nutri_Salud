@@ -11,5 +11,11 @@ class IndexController {
         require_once FOOTER;
         
     }
+    public function estatica(){
+        $pagina = $_REQUEST['p'];
+        require_once HEADER;
+        require_once 'view/estatica/'.$pagina.'.php';
+        require_once FOOTER;
+    }
 
 }
