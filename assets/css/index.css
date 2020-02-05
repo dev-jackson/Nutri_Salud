@@ -28,6 +28,9 @@
     width: 20px;
     margin-right: -40px;
 }
+.container-login .icon-back:hover{
+    cursor: pointer;
+}
 .logimage{
     padding: 0px;
     margin: 0px;
