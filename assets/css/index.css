@@ -23,6 +23,11 @@
     width: 62px;
     margin:20px;
 }
+.container-login .icon-back{
+    float: left;
+    width: 20px;
+    margin-right: -40px;
+}
 .logimage{
     padding: 0px;
     margin: 0px;

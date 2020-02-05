@@ -11,6 +11,7 @@
 <body>
     <div class="container-login">
     <form>
+    <img class="icon-back" src="../assets/imagenes/espalda.png" alt="">
         <img src="../assets/imagenes/logo.png" alt="">
   <div class="form-group">
     <label for="exampleInputEmail1">Direccion Email</label>
