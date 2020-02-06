@@ -2,7 +2,7 @@
 
 require_once'config/config.php';
 require_once 'model/DAO/PlanesDAO.php';
-require_once 'model/DAO/Planes';
+require_once 'model/DTO/Planes';
 
 class AdminController {
 

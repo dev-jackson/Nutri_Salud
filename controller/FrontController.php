@@ -12,6 +12,7 @@ class FrontController {
         $action = (isset($_REQUEST['a'])) ? $_REQUEST['a']:'iniciar';
          $controller = strtolower($controller); //convierte a minuscula
         $controller = ucwords($controller) . "Controller"; //hace que la primera letra sea mayuscula y concatena
+       
         if(strncmp($controller,'Cli',3)===0){
             require_once "controller/funcionesClientes/" . $controller . ".php";
         }elseif(strncmp($controller,'Adm',3)===0){

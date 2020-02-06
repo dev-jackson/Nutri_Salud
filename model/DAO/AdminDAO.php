@@ -1,11 +1,11 @@
-<?
+<?php
  class AdminDAO{
     private $con;
     public function __construct(){
         try{
             $this->con = Connection::getConnection();
         }catch(Exception $e){
-            echo $e.getMessage()
+            echo $e.getMessage();
         }
     }
     public function addPlanes(Planes $p){

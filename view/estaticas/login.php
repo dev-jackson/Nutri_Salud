@@ -14,14 +14,14 @@
     <a href="index.php"><img class="icon-back" src="assets/imagenes/espalda.png" alt=""></a>
         <img src="assets/imagenes/logo.png" alt="">
   <div class="form-group">
-    <label for="exampleInputEmail1">Direccion Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese email">
+    <label for="exampleInputEmail1">Usuario</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese Usuario">
     <small id="emailHelp" class="form-text text-muted">
 Nunca compartiremos su correo electrónico con nadie más...</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese Contraseña">
   </div>
  
   <button type="submit" class="btn btn-primary">Entrar</button>

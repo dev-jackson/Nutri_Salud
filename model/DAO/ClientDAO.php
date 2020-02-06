@@ -1,4 +1,4 @@
-<?
+<?php
  class ClientDAO{
 
     private $con; 
@@ -6,7 +6,7 @@
         try{
             $this->$con = Connection::getConnection();
         }catch(Exception $e){
-            echo $e.getMessage()
+            echo $e.getMessage();
         }
     }
     public function showAll(){

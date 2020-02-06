@@ -12,7 +12,7 @@
     </head>
     <body>
     <header id="header">
-    <a href="#" class="icon"><img src="./assets/imagenes/logo.png" alt="" width="45px"></a>
+    <a href="index.php" class="icon"><img src="./assets/imagenes/logo.png" alt="" width="45px"></a>
     <ul>
         <li><a href="index.php?" class="active">INICIO</a></li>
         <li><a href="index.php?c=index&c=Cliente&a=verPlanes">PLANES</a></li>
