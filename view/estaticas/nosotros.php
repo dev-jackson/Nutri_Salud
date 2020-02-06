@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="./assets/css/inicio.css">
-
-        <title>Nosotros</title>
-    </head>
-    <body>
         <div style="background-image: url('./assets/imagenes/nosotros/imagen_fondoN.jpeg'); opacity: 0.8;">
             <section id="inicio">
                 <div >
@@ -36,6 +25,4 @@
                 header.classList.toggle('active')
             }
         </script>        
-    </body>
-</html>
 
