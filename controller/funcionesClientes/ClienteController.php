@@ -1,6 +1,6 @@
 <?php
 
-require_once'config/config.php';
+require_once 'config/config.php';
 require_once 'model/DAO/PlanesDAO.php';
 
 class ClienteController {
@@ -11,10 +11,10 @@ class ClienteController {
         $this->verPlanes = new PlanesDAO();
     }
     public function verPlanes() {
-        require_once HEADER ;
+        require_once HEADER;
         //falta vista
-        $resultado = $this->planes->getAllPlanes();
-        header('Location:index.php?c=Cliente&a=mostrarPlanes');
+        $resultado = $this->verPlanes->getPlanesAll();
+        require_once 'view/dinamicas/planes.php';
         require_once FOOTER;
     }
 

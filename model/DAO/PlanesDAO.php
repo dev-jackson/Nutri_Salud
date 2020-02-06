@@ -1,5 +1,5 @@
 <?php
-    include_once '../model/Conexion.php';
+    include_once './model/Conexion.php';
     class PlanesDAO{
         private $con;
 

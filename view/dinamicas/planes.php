@@ -1,5 +1,7 @@
     <div class="container-table">
     <h1>PLANES DISPONIBLES</h1>
+    <div id="main-container">
+
     <table>
         <tbody>
         <thead>
@@ -18,4 +20,5 @@
                 <?php endforeach;?>
         </tbody>
     </table>
+    </div>
     </div>
