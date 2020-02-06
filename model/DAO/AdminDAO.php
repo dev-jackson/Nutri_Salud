@@ -1,11 +1,9 @@
 <?
  class AdminDAO{
     private $con;
-
-    private $con; 
     public function __construct(){
         try{
-            $this->$con = Connection::getConnection();
+            $this->con = Connection::getConnection();
         }catch(Exception $e){
             echo $e.getMessage()
         }
