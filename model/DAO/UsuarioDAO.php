@@ -8,14 +8,15 @@
             try{
                 $this->con = Connection::getConnection();
             }catch(Exception $e){
-                echo $e.getMessage();
+                echo $e->getMessage();
             }
        }
-       public function getUsuario($id){
+       public function validateUsuario($userName,$password){
             try{
-                $stm =$this->con->prepare("SELECT * FROM usuario WHERE idcliente= ? ");
-                $stm->execute(array($id));
-                return $stm->fetch(PDO::FETCH_ASSOC);
+                $stm =$this->con->prepare("SELECT u.nombre,u.clave FROM usuario u");
+                $stm->execute();
+                $stm->fetch(PDO::FETCH_ASSOC);
+
             }catch(Exception $e){
                 echo $e->getMessage();
             }
@@ -23,11 +24,12 @@
        public function insertUsuario(Usuario $u){
            try{
                 $stm = $this->con->prepare("INSERT INTO usuario(nombre,apellido,ci,clave,roles) VALUES(?,?,?,?,?)");
+                $newClave = $u->cryptPassword();
                 $stm->execute(array(
                     $u->getNombre(),
                     $u->getApellido(),
                     $u->getCI(),
-                    $u->getClave(),
+                    $newClave,
                     $u->getRol()
                 ));
                 //return $stm->fetch(PDO::FETCH_ASSOC);  

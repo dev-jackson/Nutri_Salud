@@ -7,6 +7,14 @@
         private $clave;
         private $rol;
         
+        public function cryptPassword(){
+            try{
+                $cryptP=password_hash($this->clave,PASSWORD_DEFAULT,['cost' => 10]);
+                return $cryptP;
+            }catch(Exception $e){
+                echo $e->getMessage();
+            }
+       }
         function getId() {
             return $this->id;
         }
