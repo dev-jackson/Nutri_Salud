@@ -22,7 +22,7 @@
             $this->usuario->insertUsuario($u);
             $result=$this->usuario->getUsuario($u->getNombre());
             require_once HEADER;
-            require_once 'index.php';
+            header('Location:index.php?');
             require_once FOOTER;
         }
     }
