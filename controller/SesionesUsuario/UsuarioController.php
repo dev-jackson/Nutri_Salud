@@ -12,8 +12,13 @@
 
             if(isset($_POST['usuario'])){
                 $usuario=$_POST['usuario'];
-                $claves=$_POST['clave'];  
-                //$this->usuario->  
+                $clave=$_POST['clave'];  
+                $rest=$this->usuario->validateUsuario($usuario,$clave);
+                if($rest['nombre']=$usuario&&password_verify($clave,$rest['clave'])){
+
+                }else{
+
+                }  
             }
         }
         public function RegiterUsuario(){
