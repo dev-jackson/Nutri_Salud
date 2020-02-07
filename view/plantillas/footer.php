@@ -20,18 +20,18 @@
 			<div class="footer-left">
           <img src="./assets/imagenes/logo.png">
 				<h3>Nutri<span>Salud</span></h3>
-				<p class="footer-company-name">© 2020 Univercidad de Guayaquil</p>
+				<p class="footer-company-name">© 2020 Universidad de Guayaquil</p>
 			</div>
  
 			<div class="footer-center">
 				<div>
 					<i>></i>
-					  <p><span>Direccion que desees</p>
+					  <p><span>Direccion</p>
 				</div>
  
 				<div>
 					<i>></i>
-					<p>cuallqui numero </p>
+					<p>+539 987654321 </p>
 				</div>
 				<div>
 					<i>></i>
@@ -40,7 +40,7 @@
 			</div>
 			<div class="footer-right">
 				<p class="footer-company-about">
-					<span>Informacion de la compañia</span>
+					<span>NutriSalud</span>
 				Tu Informacion que deses </p>
 			</div>
 		</footer>
