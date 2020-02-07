@@ -23,8 +23,6 @@
             $u->setCI($_POST['CI']);
             $u->setClave($_POST['clave']);
             $u->setRol('C');
-            $newClave=$u->cryptPassword();
-            $u->setClave($newClave);
             $this->usuario->insertUsuario($u);
             $result=$this->usuario->validateUsuario($u->getNombre(),$u->getClave());
             require_once HEADER;

@@ -24,12 +24,11 @@
        public function insertUsuario(Usuario $u){
            try{
                 $stm = $this->con->prepare("INSERT INTO usuario(nombre,apellido,ci,clave,roles) VALUES(?,?,?,?,?)");
-                $newClave = $u->cryptPassword();
                 $stm->execute(array(
                     $u->getNombre(),
                     $u->getApellido(),
                     $u->getCI(),
-                    $newClave,
+                    $u->getClave(),
                     $u->getRol()
                 ));
                 //return $stm->fetch(PDO::FETCH_ASSOC);  
