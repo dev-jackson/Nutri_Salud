@@ -17,7 +17,7 @@
         <li><a href="index.php?" class="active">INICIO</a></li>
         <li><a href="index.php?c=index&c=Cliente&a=verPlanes">PLANES</a></li>
         <li><a href="index.php?c=index&a=estatica&p=nosotros">NOSOTROS</a></li>
-        <li><a href="index.php?c=index&a=login">LOGIN</a></li>
+        <li><a href="index.php?c=index&a=login"><?php ($resultado>0)? echo($u->getNombre()."sa"):echo("LOGIN"); ?></a></li>
     </ul>
     <div class="respon" onclick="toogle()"><img src="assets/imagenes/logo.png" alt="" width="30px"></div>
         </header>

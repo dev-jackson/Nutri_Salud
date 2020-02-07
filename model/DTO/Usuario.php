@@ -29,5 +29,24 @@
         function getRol() {
             return $this->rol;
         }
+        function setId($id) {
+            $this->id = $id;
+        }
+        function setNombre($nombre) {
+            $this->nombre = $nombre;
+        }
+        function setApellido($apellido) {
+            $this->apellido = $apellido;
+        }
+        function setCI($ci) {
+            $this->ci = $ci;
+        }
+        function setClave($clave) {
+            $this->clave = $clave;
+        }
+        function setRol($rol) {
+            $this->rol = $rol;
+        }
+
     }
 ?>
