@@ -28,5 +28,8 @@ class IndexController {
         require_once 'view/dinamicas/'.$pagina.'.php';
         require_once FOOTER;
     }
+    public function registro(){
+        require_once 'view/estaticas/registro.php';
+    }
 
 }

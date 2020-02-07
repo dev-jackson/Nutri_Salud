@@ -1,4 +1,6 @@
 <?php
+    require_once 'model/Conexion.php';
+    require_once 'model/DTO/Usuario.php';
    class UsuarioDAO{
        private $con;
 
@@ -20,13 +22,14 @@
        }
        public function insertUsuario(Usuario $u){
            try{
-                $stm = $this->con->prepare("INSERT INTO usuario(nombre,apellido,ci,clave,rol) VALUES(?,?,?,?,?)");
-                $stm->execute(arrya(
+                $stm = $this->con->prepare("INSERT INTO usuario(nombre,apellido,ci,clave,roles) VALUES(?,?,?,?,?)");
+                $stm->execute(array(
                     $u->getNombre(),
                     $u->getApellido(),
                     $u->getCI(),
                     $u->getRol()
                 ));
+                return $stm->fetch(PDO::FETCH_ASSOC);  
            }catch(Exception $e){
             echo $e->getMessage();
            }

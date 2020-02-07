@@ -17,7 +17,9 @@ class FrontController {
             require_once "controller/funcionesClientes/" . $controller . ".php";
         }elseif(strncmp($controller,'Adm',3)===0){
             require_once "controller/funcionesAdm/" . $controller . ".php";
-        }else{
+        }elseif(strncmp($controller,'Usu',3)==0){
+            require_once "controller/SesionesUsuario/".$controller.".php";
+        }else {
             require_once "controller/" . $controller . ".php"; // require de la clase del controlador
         }
         $controller = new $controller; // creacion del objeto controlador
