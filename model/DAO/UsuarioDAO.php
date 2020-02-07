@@ -14,7 +14,7 @@
        public function getUsuario($id){
             try{
                 $stm =$this->con->prepare("SELECT * FROM usuario WHERE idcliente= ? ");
-                $stm->excute(array($id));
+                $stm->execute(array($id));
                 return $stm->fetch(PDO::FETCH_ASSOC);
             }catch(Exception $e){
                 echo $e->getMessage();
@@ -27,9 +27,10 @@
                     $u->getNombre(),
                     $u->getApellido(),
                     $u->getCI(),
+                    $u->getClave(),
                     $u->getRol()
                 ));
-                return $stm->fetch(PDO::FETCH_ASSOC);  
+                //return $stm->fetch(PDO::FETCH_ASSOC);  
            }catch(Exception $e){
             echo $e->getMessage();
            }

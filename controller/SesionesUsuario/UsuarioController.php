@@ -13,15 +13,16 @@
             $claves=$_POST['clave'];
         }
         public function RegiterUsuario(){
-            require_once HEADER;
-            $u=new Usario();
+            $u=new Usuario();
             $u->setNombre($_POST['nombre']);
             $u->setApellido($_POST['apellido']);
             $u->setCI($_POST['CI']);
-            $u->setCalve($_POST['clave']);
-            $u->setRol('');
-            $resultado=$this->usuario->insertUsuario($u);
-            //require_once 'view/index.php';
+            $u->setClave($_POST['clave']);
+            $u->setRol('C');
+            $this->usuario->insertUsuario($u);
+            $result=$this->usuario->getUsuario($u->getNombre());
+            require_once HEADER;
+            require_once 'index.php';
             require_once FOOTER;
         }
     }

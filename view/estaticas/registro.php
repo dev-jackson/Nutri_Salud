@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container-login">
-    <form action="index.php?c=index&c=Usuario&a=RegiterUsuario" method="POST">
+    <form action="index.php?c=Usuario&a=RegiterUsuario" method="POST">
     <a href="index.php?c=index&a=login"><img class="icon-back" src="assets/imagenes/espalda.png" alt=""></a>
         <img src="assets/imagenes/logo.png" alt="">
   <div class="form-group">
