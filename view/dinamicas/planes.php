@@ -5,7 +5,7 @@
         <tbody>
         <thead>
 				<tr>
-				<th>Nombre de Plan</th><th>Descripcion</th><th>Costo</th>
+				<th>Nombre de Plan</th><th>Descripcion</th><th>Operaciones</th>
 				</tr>
 			</thead>
             <?php 
@@ -14,7 +14,11 @@
             <tr>
                     <td><?php echo($gp['nombre']); ?></td>
                     <td><?php echo($gp['descripcion'])?></td>
-                    <td><a href="" class="btn btn-primary">Comprar</a></td>
+                    <td ><a href="" class="btn-btn-primary">Comprar</a> 
+                        <a href="" class="btn-btn-danger">Eliminar</a>
+                        <a href="" class="btn-btn-modi">Modificar</a>
+                        <a href="" class="btn-btn-info">Informacion</a>
+                    </td>
             </tr>
                 <?php endforeach;?>
         </tbody>
