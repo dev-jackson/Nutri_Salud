@@ -11,12 +11,11 @@
                 echo $e->getMessage();
             }
        }
-       public function validateUsuario($userName,$password){
+       public function validateUsuario($usuario){
             try{
-                $stm =$this->con->prepare("SELECT u.nombre,u.clave FROM usuario u");
-                $stm->execute();
-                $stm->fetch(PDO::FETCH_ASSOC);
-
+                $stm =$this->con->prepare("SELECT *FROM usuario WHERE nombre= ? ");
+                $stm->execute(array($usuario));
+                return $stm->fetch(PDO::FETCH_ASSOC);
             }catch(Exception $e){
                 echo $e->getMessage();
             }
