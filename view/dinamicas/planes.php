@@ -1,3 +1,4 @@
+<?php session_start()?>
     <div class="container-table">
     <h1>PLANES DISPONIBLES</h1>
     <div id="main-container">
@@ -14,10 +15,20 @@
             <tr>
                     <td><?php echo($gp['nombre']); ?></td>
                     <td><?php echo($gp['descripcion'])?></td>
-                    <td ><a href="" class="btn-btn-primary">Comprar</a> 
-                        <a href="" class="btn-btn-danger">Eliminar</a>
-                        <a href="" class="btn-btn-modi">Modificar</a>
-                        <a href="" class="btn-btn-info">Informacion</a>
+                    <td >
+                        <?php
+                            if(isset($_SESSION['Adm'])){
+                                echo('<a href="" class="btn-btn-primary">Comprar</a>');
+                                echo('<a href="" class="btn-btn-danger">Eliminar</a>');
+                                echo('<a href="" class="btn-btn-modi">Modificar</a>');
+                                echo('<a href="" class="btn-btn-info">Informacion</a>');
+                            }elseif(isset($_SESSION['Client'])){
+                                echo('<a href="" class="btn-btn-primary">Comprar</a>');
+                                echo('<a href="" class="btn-btn-info">Informacion</a>');
+                            }else{
+                                echo('<a href="" class="btn-btn-info">Informacion</a>');
+                            }
+                        ?>
                     </td>
             </tr>
                 <?php endforeach;?>
