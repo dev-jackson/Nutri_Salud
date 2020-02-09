@@ -17,7 +17,7 @@
     <label for="">Ingrese Nombre y Apellido</label>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+      <input type="text" class="form-control" name="nombre"  placeholder="Nombre">
     </div>
     <div class="col">
       <input type="text" class="form-control" name="apellido" placeholder="Apellido">

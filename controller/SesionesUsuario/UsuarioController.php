@@ -13,11 +13,17 @@
             if(isset($_POST['usuario'])){
                 $usuario=$_POST['usuario'];
                 $clave=$_POST['clave'];  
-                $rest=$this->usuario->validateUsuario($usuario,$clave);
-                if($rest['nombre']=$usuario&&password_verify($clave,$rest['clave'])){
-
+                $rest=$this->usuario->validateUsuario($usuario);
+                $a=$rest['clave'];
+                echo "<script type='text/javascript'>alert('$a');</script>";
+                if(password_verify($clave,$rest['clave'])){
+                    session_start();
+                    $rest['roles']='C'?$_SESSION['Client']=$rest['nombre']:$_SESSION['Adm']=$rest['nombre'];
+                    header("Location: index.php?");
                 }else{
-
+                    $message = "wrong answer";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                    //header("Location:index.php?c=index&a=login");
                 }  
             }
         }
