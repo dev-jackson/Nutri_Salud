@@ -31,5 +31,11 @@ class IndexController {
     public function registro(){
         require_once 'view/estaticas/registro.php';
     }
+    public function cerrarSesion(){
+        session_start();
+        session_destroy();
+        require_once 'view/inicio.php/';
+        
+    }
 
 }

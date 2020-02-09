@@ -84,45 +84,25 @@ section h3{
     color: #062c33;
     text-align: center;
 }
-.btn-btn-danger{
-    background: red;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
 }
-.btn-btn-danger:hover{
-    background-color: rgb(255, 92, 92);
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
 }
-.btn-btn-primary{
-    background:#205aff;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-primary:hover{
-    background-color: #5d88ff;
-}
-.btn-btn-modi{
-    background:rgb(245, 204, 42);
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-modi:hover{
-    background-color:#F7DC6F;
-}
-.btn-btn-info{
-    background:#7F8C8D;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-info:hover{
-    background-color:#E5E8E8;
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
 }
 @media(max-width: 992px){
     section{

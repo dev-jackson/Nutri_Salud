@@ -1,33 +1,44 @@
 <?php
-    class Planes{
-        private $id;
-        private $nombre;
-        private $descripcion;
-        function getId() {
-            return $this->id;
-        }
 
-        function getNombre() {
-            return $this->nombre;
-        }
+class Planes {
 
-        function getDescripcion() {
-            return $this->descripcion;
-        }
+    private $id;
+    private $nombre;
+    private $descripcion;
+    private $precio;
 
-        function setId($id) {
-            $this->id = $id;
-        }
-
-        function setNombre($nombre) {
-            $this->nombre = $nombre;
-        }
-
-        function setDescripcion($descripcion) {
-            $this->descripcion = $descripcion;
-        }
-
-
-        
+    function getId() {
+        return $this->id;
     }
+
+    function getNombre() {
+        return $this->nombre;
+    }
+
+    function getDescripcion() {
+        return $this->descripcion;
+    }
+
+    function setId($id) {
+        $this->id = $id;
+    }
+
+    function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
+
+    function setDescripcion($descripcion) {
+        $this->descripcion = $descripcion;
+    }
+    function getPrecio() {
+        return $this->precio;
+    }
+
+    function setPrecio($precio) {
+        $this->precio = $precio;
+    }
+
+
+}
+
 ?>
