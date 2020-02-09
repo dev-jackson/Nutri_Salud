@@ -39,7 +39,10 @@ header ul a{
 }
 header ul li a.active,
 header ul li a:hover{
-    background: #205aff;
+    background: #000103;
+}
+header ul li a .sub li{
+    display: none;
 }
 .respon{
     display: none;
@@ -93,46 +96,6 @@ section h3{
     text-transform: uppercase;
     color: #062c33;
     text-align: center;
-}
-.btn-btn-danger{
-    background: red;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-danger:hover{
-    background-color: rgb(255, 92, 92);
-}
-.btn-btn-primary{
-    background:#205aff;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-primary:hover{
-    background-color: #5d88ff;
-}
-.btn-btn-modi{
-    background:rgb(245, 204, 42);
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-modi:hover{
-    background-color:#F7DC6F;
-}
-.btn-btn-info{
-    background:#7F8C8D;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
-}
-.btn-btn-info:hover{
-    background-color:#E5E8E8;
 }
 @media(max-width: 992px){
     section{
