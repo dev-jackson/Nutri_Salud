@@ -25,7 +25,7 @@ Nunca compartiremos su correo electrónico con nadie más...</small>
   </div>
  
   <button type="submit" class="btn btn-primary">Entrar</button>
-  <a href="index.php?c=index&a=registro" class="btn btn-secondary">Resgistro</a>
+  <a href="index.php?c=index&a=registro" class="btn btn-secondary">Registro</a>
 </form>
     </div>
 </body>
