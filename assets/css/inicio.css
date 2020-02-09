@@ -39,7 +39,10 @@ header ul a{
 }
 header ul li a.active,
 header ul li a:hover{
-    background: #205aff;
+    background: #000103;
+}
+header ul li a .sub li{
+    display: none;
 }
 .respon{
     display: none;
@@ -64,6 +67,14 @@ section{
 #sect-1 h2{
     color: #fff;
 }
+section div{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background: #eee;
+    width: 40%;
+    margin: 0 auto;
+}
 section h2{
     font-size: 2.5em;
     text-transform: uppercase;
@@ -73,6 +84,8 @@ section h2{
 section p{
     display: inline-block;
     padding: 8px 8px;
+    align: justify;
+
 }
 section img{
     max-width: 800px;
@@ -84,33 +97,13 @@ section h3{
     color: #062c33;
     text-align: center;
 }
-.submenu{
-	position: absolute;
-	background: #333333;
-	width: 120%;
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 1.5s;
-}
-
-.submenu li a{
-	display: block;
-	padding: 15px;
-	color: #fff;
-	font-family: 'Open sans';
-	text-decoration: none;
-}
-.menu li:hover .submenu{
-	visibility: visible;
-	opacity: 1;
-}
 @media(max-width: 992px){
     section{
         padding: 100px 50px 100px;
         flex-direction: column;
     }
     header .icon{
-       display: none;
+        display: none;
     }
     header ul{
         transition: 0.5s;

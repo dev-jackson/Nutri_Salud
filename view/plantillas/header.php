@@ -22,7 +22,7 @@
         <li><a href="index.php?c=index&a=login"><?php if(isset($_SESSION['Adm'])){
             echo strtoupper ($_SESSION['Adm'])."(ADM)".'<a>salir</a>';   
         }elseif(isset($_SESSION['Client'])){
-            echo strtoupper ($_SESSION['Client']).'<ul class="submenu"><li><a href="#">Servicio #3</a></li></ul>';
+            echo strtoupper ($_SESSION['Client']);
         }else{
             echo 'LOGIN';
         }?></a></li>

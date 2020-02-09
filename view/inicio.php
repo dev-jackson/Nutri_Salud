@@ -1,23 +1,30 @@
-
+<div style="background-color: #1c7430">
     <section id="inicio">
-    <div>
-        <h2>Los mejores planes nutricionales</h2>
-        <p>Inserta parr afo interesante no seas bago</p>
-        <p>Texto de Relleno</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-    <img src="./assets/imagenes/imagen1.jpg" alt="" >
-</section>
-<section id="sect-1">
-    <h2>Ventajas una buena alimentacion</h2>
-</section>
-<section>
-    <h2>Disminución del riesgo de padecer enfermedades cardiovasculares a largo plazo, ayudando a reducir el colesterol.</h2>
-    <img src="./assets/imagenes/imagen2.jpg" alt="">
-</section>
-    <script type="text/javascript">
-        function toogle(){
-            var header = document.getElementById("header")
-            header.classList.toggle('active')
-        }
-    </script>        
+        <div>
+            <h2>Los mejores planes nutricionales</h2>
+
+            <p>Según el tipo de objetivo que te marques te ofrecemos una dieta u otra, puedes realizar las dietas de manera independiente, es decir, combinandola con los diferentes servicios de nuestra plataforma. O en el caso de que escojas un plan de entrenamiento, la dieta ya vendrá incorporada cada dia segun el plan que hayas escogido. Por otro lado, todas las dietas tienen una duración de 4 semanas (incluido el fin de semana) excepto las dietas de runners que tienen 8 semanas.
+                Todas las dietas son genéricas, no estan personalizadas para cada usuario. Estos son las dietas según objetivos de nuestra plataforma</p>
+        </div>
+        <img src="./assets/imagenes/imagen1.jpg" alt="" >
+    </section>
+    <section id="sect-1">
+        <h2>Ventajas una buena alimentacion</h2>
+    </section>
+    <section>
+        <div>
+            <h2>PRINCIPALES VENTAJAS</h2>
+            <p>Conocé los beneficios que aporta una alimentación saludable y los consejos para poder llevarla a cabo. Además, enterate cuáles son los tres pilares principales para vivir saludablemente. Tips y recomendaciones vittal.
+                </br></br>La nutrición es muy importante para la calidad de vida de las personas, siendo tres los pilares que ayudan a mantener una buena salud: el descanso, la alimentación y el ejercicio. La cuestión radica en aprender a equilibrar estas tres funciones. Una alimentación saludable implica consumir diferentes grupos de alimentos en cada comida para lograr un aporte equilibrado de nutrientes y proteínas.
+            </p>
+        </div>
+
+        <img src="./assets/imagenes/imagen2.jpg" alt="">
+    </section>
+</div>
+<script type="text/javascript">
+    function toogle() {
+        var header = document.getElementById("header")
+        header.classList.toggle('active')
+    }
+</script>        
