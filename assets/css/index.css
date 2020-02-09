@@ -38,27 +38,7 @@
 .logimage img{
     width: 200px;
 }
-.menu{
-    width: 100%;
-}
-.menu ul{
-    background: #21618C;
-    float: right;
-    display: flex;
-}
-.menu ul li{
-    padding: 22px 140px;
-    list-style: none;
-}
-.menu ul li a{
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 100;
-    color: black;
-}
-.menu ul li:hover{
-    background: teal;
-}
+
 .container-table{
     padding: 100px 60px;
 }

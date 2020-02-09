@@ -39,7 +39,10 @@ header ul a{
 }
 header ul li a.active,
 header ul li a:hover{
-    background: #205aff;
+    background: #000103;
+}
+header ul li a .sub li{
+    display: none;
 }
 .respon{
     display: none;
@@ -83,26 +86,6 @@ section h3{
     text-transform: uppercase;
     color: #062c33;
     text-align: center;
-}
-.submenu{
-	position: absolute;
-	background: #333333;
-	width: 120%;
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 1.5s;
-}
-
-.submenu li a{
-	display: block;
-	padding: 15px;
-	color: #fff;
-	font-family: 'Open sans';
-	text-decoration: none;
-}
-.menu li:hover .submenu{
-	visibility: visible;
-	opacity: 1;
 }
 @media(max-width: 992px){
     section{

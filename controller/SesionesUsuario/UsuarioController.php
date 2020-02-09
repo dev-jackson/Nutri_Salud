@@ -14,8 +14,6 @@
                 $usuario=$_POST['usuario'];
                 $clave=$_POST['clave'];  
                 $rest=$this->usuario->validateUsuario($usuario);
-                $a=$rest['clave'];
-                echo "<script type='text/javascript'>alert('$a');</script>";
                 if(password_verify($clave,$rest['clave'])){
                     session_start();
                     $rest['roles']='C'?$_SESSION['Client']=$rest['nombre']:$_SESSION['Adm']=$rest['nombre'];
