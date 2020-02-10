@@ -35,8 +35,20 @@
             $this->usuario->insertUsuario($u);
             $result=$this->usuario->validateUsuario($u->getNombre(),$u->getClave());
             require_once HEADER;
-            header('Location:index.php?');
+            require_once 'view/inicio.php';
             require_once FOOTER;
+        }
+        public function DestroySession(){
+            $status=$_REQUEST['s'];
+            if(isset($status)){
+                unset($_SESSION);
+                session_destroy();
+                require_once HEADER;
+                header('Location:index.php?');
+                require_once FOOTER;
+            }else{
+                echo "Hola";
+            }
         }
     }
 ?>

@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start();?>
 <div>
 <html lang="ES">
     <head>
@@ -58,7 +58,8 @@
                 .then((value) => {
                 switch (value) {                                     
                 case "si":
-                           window.location.href ="login.php";    
+                            <?php session_destroy();?>
+                           window.location.href ="index.php?c=Usuario&a=DestroySession&s='$_SESSION'";    
                   break;
                 case "no":
                                
