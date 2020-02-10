@@ -12,6 +12,7 @@
         <div class="container-planes">
             <form action="index.php?c=Admin&a=guardar" method="post">
                 <img src="assets/imagenes/logo.png" alt="">
+                <h2>registro del plan</h2>
                 <input type="hidden" name="id" value="<?php echo isset($plan) ? $plan->id : ''; ?>"/>
                 <div class="form-group">
                     <label>Nombre</label>
@@ -23,7 +24,7 @@
                 </div>
                 <div class="text-center">
                     <input type="submit" value="Guardar">
-
+                    <input TYPE="button" VALUE="Volver" onClick="history.back()">
                 </div>
             </form>
         </div>
