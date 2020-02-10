@@ -28,7 +28,7 @@
                 echo "href='index.php?c=index&a=login'";
             }
         ?>><?php if(isset($_SESSION['Adm'])){
-            echo strtoupper ($_SESSION['Adm'].'(ADM)').'<a>salir</a>';   
+            echo strtoupper ($_SESSION['Adm'].'(ADM)');   
         }elseif(isset($_SESSION['Client'])){
             echo strtoupper ($_SESSION['Client']);
         }else{
