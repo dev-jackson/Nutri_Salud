@@ -9,8 +9,9 @@
         <title>Inicio de Sesion</title>
     </head>
     <body>
-        <div class="">
+        <div class="container-planes">
             <form action="index.php?c=Admin&a=guardar" method="post">
+                <img src="assets/imagenes/logo.png" alt="">
                 <input type="hidden" name="id" value="<?php echo isset($plan) ? $plan->id : ''; ?>"/>
                 <div class="form-group">
                     <label>Nombre</label>
