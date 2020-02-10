@@ -18,6 +18,12 @@ class AdminController {
         $resultado = $this->planes->getAllPlanes();
         require_once FOOTER;
     }
+    public function mostrar(){
+        require_once 'view/dinamicas/planesViewEdit.php';
+    }
+    public function eliminar(){
+        
+    }
 
     public function Guardar() {
         if (!isset($_POST['nombre']) || empty($_POST['nombre'])) {

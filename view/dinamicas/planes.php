@@ -18,8 +18,8 @@
                     <td >
                         <?php
                             if(isset($_SESSION['Adm'])){
-                                echo('<a href="" class="btn-btn-primary">Crear</a>');
-                                echo('<a href="" class="btn-btn-danger">Eliminar</a>');
+                                echo('<a href="index.php?c=Admin&a=mostrar" class="btn-btn-primary">Crear</a>');
+                                echo('<a href="index.php?c=Admin&a=eliminar" class="btn-btn-danger">Eliminar</a>');
                                 echo('<a href="" class="btn-btn-modi">Modificar</a>');
                                 echo('<a href="" class="btn-btn-info">Informacion</a>');
                             }elseif(isset($_SESSION['Client'])){
