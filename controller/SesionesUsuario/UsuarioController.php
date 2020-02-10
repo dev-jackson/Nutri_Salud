@@ -47,6 +47,7 @@
             $status=$_REQUEST['s'];
             if(isset($status)){
                 unset($_SESSION);
+                session_start();
                 session_destroy();
                 require_once HEADER;
                 header('Location:index.php?');

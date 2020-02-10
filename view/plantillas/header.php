@@ -59,7 +59,7 @@
                 .then((value) => {
                 switch (value) {                                     
                 case "si":
-                            <?php   //session_destroy();?>
+
                            window.location.href ="index.php?c=Usuario&a=DestroySession&s='$_SESSION'";    
                   break;
                 case "no":
