@@ -15,8 +15,13 @@
                 $clave=$_POST['clave'];  
                 $rest=$this->usuario->validateUsuario($usuario);
                 if(password_verify($clave,$rest['clave'])){
-                    session_start();
-                    $rest['roles']='C'?$_SESSION['Client']=$rest['nombre']:$_SESSION['Adm']=$rest['nombre'];
+                    if($rest['roles']=='C'){
+                        session_start();
+                        $_SESSION['Client']=$rest['nombre'];
+                    }else{
+                        session_start();
+                        $_SESSION['Adm']=$rest['nombre'];
+                    }
                     header("Location: index.php?");
                 }else{
                     $message = "wrong answer";

@@ -1,4 +1,5 @@
 <!--<div style="background-image: url('./assets/imagenes/nosotros/imagen_fondoN.jpeg'); opacity: 0.8;">-->
+<?php session_start();?>
 <div style="background-color: #1c7430">
     <section id="inicio">
         <div>

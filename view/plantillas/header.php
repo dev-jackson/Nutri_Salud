@@ -21,13 +21,14 @@
         <li><a href="index.php?c=index&c=Cliente&a=verPlanes" id="planes">PLANES</a></li>
         <li><a href="index.php?c=index&a=estatica&p=nosotros" id="nosotros">NOSOTROS</a></li>
         <li><a  <?php
-            if(isset($_SESSION['Amd'])||isset($_SESSION['Client'])){
+            if(isset($_SESSION['Adm'])||isset($_SESSION['Client'])){
                 echo "href='#' onclick='cerrar();'";
+                
             }else{
                 echo "href='index.php?c=index&a=login'";
             }
         ?>><?php if(isset($_SESSION['Adm'])){
-            echo strtoupper ($_SESSION['Adm'])."(ADM)".'<a>salir</a>';   
+            echo strtoupper ($_SESSION['Adm'].'(ADM)').'<a>salir</a>';   
         }elseif(isset($_SESSION['Client'])){
             echo strtoupper ($_SESSION['Client']);
         }else{
@@ -58,7 +59,7 @@
                 .then((value) => {
                 switch (value) {                                     
                 case "si":
-                            <?php session_destroy();?>
+                            <?php   //session_destroy();?>
                            window.location.href ="index.php?c=Usuario&a=DestroySession&s='$_SESSION'";    
                   break;
                 case "no":

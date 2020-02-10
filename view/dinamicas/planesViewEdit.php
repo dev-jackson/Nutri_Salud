@@ -1,3 +1,4 @@
+
 <form action="index.php?c=Admin&a=Guardar" method="post">
     <input type="hidden" name="id" value="<?php echo isset($plan) ? $plan->id : '';?>"/>
     <div class="">
