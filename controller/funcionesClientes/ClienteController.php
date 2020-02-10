@@ -12,7 +12,6 @@ class ClienteController {
     }
     public function verPlanes() {
         require_once HEADER;
-        //falta vista
         $resultado = $this->verPlanes->getPlanesAll();
         require_once 'view/dinamicas/planes.php';
         require_once FOOTER;

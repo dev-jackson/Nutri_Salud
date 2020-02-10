@@ -11,10 +11,9 @@
     public function addPlanes(Planes $p){
         try{
             $stm =$this->con->prepare("INSERT INTO planes_nutri(nombre,descripcion) VALUES(?,?)");
-            $stm->excute(array(
+            $stm->execute(array(
                 $p->getNombre(),
-                $p->getDescripcion()
-            ));
+                $p->getDescripcion()));
         }catch(Exception $e){
             echo $e->getMessage();
         }

@@ -5,7 +5,7 @@ class Planes {
     private $id;
     private $nombre;
     private $descripcion;
-    private $precio;
+    
 
     function getId() {
         return $this->id;
@@ -30,15 +30,6 @@ class Planes {
     function setDescripcion($descripcion) {
         $this->descripcion = $descripcion;
     }
-    function getPrecio() {
-        return $this->precio;
-    }
-
-    function setPrecio($precio) {
-        $this->precio = $precio;
-    }
-
-
-}
+   }
 
 ?>
