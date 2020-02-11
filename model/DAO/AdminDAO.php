@@ -18,11 +18,26 @@
             echo $e->getMessage();
         }
     }
-    public function updatePlanes(){
+    public function mostrarxId($id){
+        $sql = "select * from planes_nutri where idplanes_nutri = ?";
+        $sen = $this->con->prepare($sql);
+        $par = array($id);
+        $sen->execute($par);
+        $res=$sen->fetch(PDO::FETCH_OBJ);
+        return $res;
+    }
+
+    public function updatePlanes(Planes $p){
         try{
-            $stm = $this->can->prepare("UPDATE planes_nutri"
-            . "SET nombre= ?, descripcion= ?");
-            $stm->excute();
+            
+            $sql = "UPDATE planes_nutri SET nombre= ?, descripcion= ? where idplanes_nutri=?";
+            $sentencia = $this->con->prepare($sql);
+            $par = array($p->getNombre(),
+                    $p->getDescripcion(),
+                    $p->getId());
+            $sentencia->execute($par);
+            $res = $sentencia->rowCount();
+            return $res;
         }catch(Exception $e){
             echo $e->getMessage();
         }

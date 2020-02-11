@@ -24,6 +24,14 @@ class AdminController {
 
     public function mostrar() {
         require_once 'view/dinamicas/planesViewEdit.php';
+}
+
+    public function mostrarid(){
+        $plan = new AdminDAO();
+        $planedit = $this->admin->mostrarxId($_REQUEST['id']);
+//       require_once HEADER;
+        REQUIRE_ONCE 'view/dinamicas/planesViewEdit.php';
+        REQUIRE_ONCE FOOTER;
     }
 
     public function eliminar() {
@@ -47,9 +55,21 @@ class AdminController {
         $plan = new Planes();
         $plan->setNombre($_POST['nombre']);
         $plan->setDescripcion($_POST['descripcion']);
-//        $plan->setPrecio($_POST['precio']);
-        $respuesta = $this->admin->addPlanes($plan);
+        
+        if(isset($_REQUEST['id']) && !empty($_REQUEST['id'])){
+            $plan->setId($_REQUEST['id']);
+            $res = $this->admin->updatePlanes($plan);
+        }else{
+            $respuesta = $this->admin->addPlanes($plan);
+        }
         header('Location:index.php?c=Admin&a=mostrarPlanes');
+    }
+    
+    public function mostrarDetallePlan(){
+        require_once HEADER;
+        $resultado = $this->planes->planesDetalles();
+        require_once 'view/dinamicas/planDetallado.php';
+        require_once FOOTER;
     }
 
 }
