@@ -27,5 +27,13 @@
             echo $e->getMessage();
         }
     }
+    public function delete($id){
+        $sql = "delete from planes_nutri where idplanes_nutri = ?";
+        $sent = $this->con->prepare($sql);
+        $par = array($id);
+        $sent->execute($par);
+        $result = $sent->rowCount();
+        return $result;
+    }
  }
 ?>

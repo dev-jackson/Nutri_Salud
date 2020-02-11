@@ -21,11 +21,22 @@ class AdminController {
         require_once 'view/dinamicas/planes.php';
         require_once FOOTER;
     }
-    public function mostrar(){
+
+    public function mostrar() {
         require_once 'view/dinamicas/planesViewEdit.php';
     }
-    public function eliminar(){
-        
+
+    public function eliminar() {
+        if (!isset($_REQUEST['id'])) {
+            header('Location:index.php?c=Admin&a=mostrarPlanes');
+        }
+        $res = $this->admin->delete($_REQUEST['id']);
+        if ($res > 0) {
+            $_SESSION['mensaje'] = "Se ha eliminado";
+        } else {
+            $_SESSION['mensaje'] = "No se ha eliminado";
+        }
+        header('Location:index.php?c=Admin&a=mostrarPlanes');
     }
 
     public function guardar() {
