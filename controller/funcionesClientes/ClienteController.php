@@ -16,5 +16,10 @@ class ClienteController {
         require_once 'view/dinamicas/planes.php';
         require_once FOOTER;
     }
-
+    public function informacion(){
+        require_once HEADER;
+        $resultado = $this->verPlanes->getPlanesAll();
+        require_once 'view/dinamicas/informacion.php';
+        require_once FOOTER;
+    }
 }
