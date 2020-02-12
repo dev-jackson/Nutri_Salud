@@ -8,10 +8,10 @@
             <p>Todos tenemos derecho a sentirnos contentos en nuestro cuerpo, y disfrutar del bienestar 
                 que redunda de un estilo de vida saludable. Todos podemos, hay que querer hacerlo.</p>
             </br>
-            <h3>Marianela Fernandes</h3>
+            <h3>Titulos de nuestros Profesionales</h3>
             <ul style="padding: 4%">
                 <li>Dietista-Nutricionista</li>
-                <li>Diplomada y Graduada en Nutrición Humana y Dietética.</li>
+                <li>Diplomado en Nutrición Humana y Dietética.</li>
                 <li>Máster Oficial de Nutrición en la Actividad Física y el Deporte</li>
                 <li>Máster Oficial de Nutrición en la Actividad Física y el Deporte</li>
             </ul>

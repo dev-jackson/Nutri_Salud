@@ -4,7 +4,7 @@
             <h2>Los mejores planes nutricionales</h2>
 
             <p>Según el tipo de objetivo que te marques te ofrecemos una dieta u otra, puedes realizar las dietas de manera independiente, es decir, combinandola con los diferentes servicios de nuestra plataforma. O en el caso de que escojas un plan de entrenamiento, la dieta ya vendrá incorporada cada dia segun el plan que hayas escogido. Por otro lado, todas las dietas tienen una duración de 4 semanas (incluido el fin de semana) excepto las dietas de runners que tienen 8 semanas.
-                Todas las dietas son genéricas, no estan personalizadas para cada usuario. Estos son las dietas según objetivos de nuestra plataforma</p>
+                Todas las dietas son genéricas, no estan personalizadas para cada usuario. Estos son las dietas según objetivos de nuestra plataforma.</p>
         </div>
         <img src="./assets/imagenes/imagen1.jpg" alt="" >
     </section>

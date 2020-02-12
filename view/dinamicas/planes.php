@@ -31,8 +31,9 @@ if (isset($_SESSION['mensaje'])) {
                 ?>
                 <tr>
                     <td><?php echo($gp['idplanes_nutri']); ?></td>
-                    <td><?php echo($gp['descripcion']); ?></td>
                     <td><?php echo($gp['nombre']); ?></td>
+                    <td><?php echo($gp['descripcion']); ?></td>
+                    
 
                     <td >
                         <?php

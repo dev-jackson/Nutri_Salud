@@ -26,7 +26,10 @@
 			<div class="footer-center">
 				<div>
 					<i>></i>
-					  <p><span>Direccion</p>
+                                        <p><a href="">Direccion</a>
+                                              
+                                             
+                                          </p>
 				</div>
  
 				<div>
@@ -35,13 +38,13 @@
 				</div>
 				<div>
 					<i>></i>
-					<p><a href="coloca el email aqui">nutrisalud@gmail.com</a></p>
+					<p>nutrisalud@gmail.com</p>
 				</div>
 			</div>
 			<div class="footer-right">
 				<p class="footer-company-about">
 					<span>NutriSalud</span>
-				Tu Informacion que deses </p>
+				La ayuda Ideal para conseguir tus logros  </p>
 			</div>
 		</footer>
 	</body>
