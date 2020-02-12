@@ -17,7 +17,7 @@
     <header class="header-p">
     <a href="index.php" class="icon"><img src="./assets/imagenes/logo.png" alt="" width="45px"></a>
     <ul>
-        <li><a href="index.php?" class="active" id="inicio">INICIO</a></li>
+        <li><a href="index.php?c=index&a=iniciar" class="active" id="inicio">INICIO</a></li>
         <li><a href="index.php?c=index&c=Cliente&a=verPlanes" id="planes">PLANES</a></li>
         <li><a href="index.php?c=index&a=estatica&p=nosotros" id="nosotros">NOSOTROS</a></li>
         <li><a  <?php

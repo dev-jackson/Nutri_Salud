@@ -30,7 +30,7 @@
     public function updatePlanes(Planes $p){
         try{
             
-            $sql = "UPDATE planes_nutri SET nombre= ?, descripcion= ? where idplanes_nutri=?";
+            $sql = "UPDATE planes_nutri SET nombre= ?, descripcion= ? where idplanes_nutri= ? ";
             $sentencia = $this->con->prepare($sql);
             $par = array($p->getNombre(),
                     $p->getDescripcion(),

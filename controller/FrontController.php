@@ -8,7 +8,7 @@ class FrontController {
     
     public function __construct() {}
     public function rutear() {
-        $controller = (isset($_REQUEST['c'])) ? $_REQUEST['c']:'index';
+        $controller = (isset($_REQUEST['c'])) ? $_REQUEST['c']:'Index';
         $action = (isset($_REQUEST['a'])) ? $_REQUEST['a']:'iniciar';
          $controller = strtolower($controller); //convierte a minuscula
         $controller = ucwords($controller) . "Controller"; //hace que la primera letra sea mayuscula y concatena
