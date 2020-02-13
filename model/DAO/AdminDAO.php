@@ -50,6 +50,15 @@ class AdminDAO {
         $res = $sen->fetch(PDO::FETCH_OBJ);
         return $res;
     }
+    
+    public function mostrarDetallexId($id){
+        $sql=" select * from detalle_plan where iddetalle_plan = ?";
+        $sen = $this->con->prepare($sql);
+        $parametros = array($id);
+        $sen->execute($parametros);
+        $res = $sen->fetch(PDO::FETCH_OBJ);
+        return $res;
+    }
 
     public function updatePlanes(Planes $p) {
         try {
@@ -73,6 +82,13 @@ class AdminDAO {
         $par = array($id);
         $sent->execute($par);
         $result = $sent->rowCount();
+        return $result;
+    }
+
+    public function deletePlanDetails($id) {
+        $sql = $this->con->prepare("delete from detalle_plan where iddetalle_plan = ?");
+        $sql->execute(array($id));
+        $result = $sql->rowCount();
         return $result;
     }
 

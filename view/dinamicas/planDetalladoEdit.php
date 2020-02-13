@@ -13,42 +13,42 @@
             <form action="index.php?c=Admin&a=guardarPlanDetallado" method="post">
                 <img src="assets/imagenes/logo.png" alt="">
                 <h2>registro de plan Detallado</h2>
-                <input type="hidden" name="idPlanDetallado" value="<?php echo isset($planedit) ? $planedit->id : ''; ?>"/>
+                <input type="hidden" name="idPlanDetallado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idPlanDetallado : ''; ?>"/>
                 <div class="form-group">
                     <label>Id Plan</label>
-                    <input type="text" name="id_plan" value="<?php echo isset($planedit) ? $planedit->nombre : ''; ?> "/>
+                    <input type="text" name="idplan" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idplaNutri : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Plan</label>
-                    <input type="text" name="plan" value="<?php echo isset($planedit) ? $planedit->nombre : ''; ?> "/>
+                    <input type="text" name="plan" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->plan : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Lunes</label>
-                    <input type="text" name="lunes" value="<?php echo isset($planedit) ? $planedit->nombre : ''; ?> "/>
+                    <input type="text" name="lunes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->lunes : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Martes</label>
-                    <input type="text" name="martes" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="martes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->martes : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Miercoles</label>
-                    <input type="text" name="miercoles" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="miercoles" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->miercoles : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Jueves</label>
-                    <input type="text" name="jueves" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="jueves" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->jueves : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Viernes</label>
-                    <input type="text" name="viernes" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="viernes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->viernes : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Sabado</label>
-                    <input type="text" name="sabado" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="sabado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->sabado : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Domingo</label>
-                    <input type="text" name="domingo" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="domingo" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->domingo : ''; ?> "/>
                 </div>
                 <div class="text-center">
                     <input type="submit" value="Guardar">

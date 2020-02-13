@@ -25,17 +25,24 @@ class AdminController {
 
     public function mostrar() {
         require_once 'view/dinamicas/planesViewEdit.php';
-}
-    public function mostrarPlanesDetallados(){
+    }
+
+    public function mostrarPlanesDetallados() {
         require_once 'view/dinamicas/planDetalladoEdit.php';
     }
 
-    public function mostrarid(){
-        $plan = new AdminDAO();
+    public function mostrarid() {
+        //$plan = new AdminDAO();
         $planedit = $this->admin->mostrarxId($_REQUEST['id']);
 //       require_once HEADER;
         REQUIRE_ONCE 'view/dinamicas/planesViewEdit.php';
-        REQUIRE_ONCE FOOTER;
+//        REQUIRE_ONCE FOOTER;
+    }
+    public function mostrarIdDetalle(){
+        
+        $DetalleEdit = $this->admin->mostrarDetallexId($_REQUEST['id']);
+        require_once 'view/dinamicas/planDetalladoEdit.php';
+        
     }
 
     public function eliminar() {
@@ -51,6 +58,18 @@ class AdminController {
         header('Location:index.php?c=Admin&a=mostrarPlanes');
     }
 
+    public function eliminarPlanesDetallados() {
+        if (!isset($_REQUEST['id'])) {
+            header('Location:index.php?c=Admin&a=mostrarDetallePlan');
+        }$res = $this->admin->deletePlanDetails($_REQUEST['id']);
+        if ($res > 0) {
+            $_SESSION['mensaje'] = "Se ha eliminado";
+        } else {
+            $_SESSION['mensaje'] = "No se ha eliminado";
+        }
+        header('Location:index.php?c=Admin&a=mostrarDetallePlan');
+    }
+
     public function guardar() {
         if (!isset($_POST['nombre']) || empty($_POST['nombre'])) {
             $_SESSION['mensaje'] = "Debe ingresar nombre";
@@ -59,16 +78,17 @@ class AdminController {
         $plan = new Planes();
         $plan->setNombre($_POST['nombre']);
         $plan->setDescripcion($_POST['descripcion']);
-        
-        if(isset($_REQUEST['id']) && !empty($_REQUEST['id'])){
+
+        if (isset($_REQUEST['id']) && !empty($_REQUEST['id'])) {
             $plan->setId($_REQUEST['id']);
             $respuesta = $this->admin->updatePlanes($plan);
-        }else{
+        } else {
             $respuesta = $this->admin->addPlanes($plan);
         }
         header('Location:index.php?c=Admin&a=mostrarPlanes');
     }
-    public function guardarPlanDetallado(){
+
+    public function guardarPlanDetallado() {
         $planDetalle = new PlanesDetallado();
         $planDetalle->setIdplaNutri($_REQUEST['id_plan']);
         $planDetalle->setPLan($_REQUEST['plan']);
@@ -79,17 +99,17 @@ class AdminController {
         $planDetalle->setViernes($_REQUEST['viernes']);
         $planDetalle->setSabado($_REQUEST['sabado']);
         $planDetalle->setDomingo($_REQUEST['domingo']);
-        
-        if(isset($_REQUEST['idPlanDetallado']) && !empty($_REQUEST['idPlanDetallado'])){
+
+        if (isset($_REQUEST['idPlanDetallado']) && !empty($_REQUEST['idPlanDetallado'])) {
             $planDetalle->setIdPlanDetallado($_REQUEST['idPlanDetallado']);
             $respuesta = $this->admin;
-        }else{
+        } else {
             $respuesta = $this->admin->addPlanesDetallados($planDetalle);
         }
         header('Location:index.php?c=Admin&a=mostrarDetallePlan');
     }
 
-    public function mostrarDetallePlan(){
+    public function mostrarDetallePlan() {
         require_once HEADER;
         $resultado = $this->planes->planesDetalles();
         require_once 'view/dinamicas/planDetallado.php';

@@ -20,6 +20,7 @@ session_start();
             
             <br></br>
             <tr >
+                <th>Id </th>
                 <th>Id Plan</th>
                 <th>Plan</th>
                 <th>Lunes</th>
@@ -36,6 +37,7 @@ session_start();
             foreach ($resultado as $gp):
                 ?>
                 <tr>
+                    <td><?php echo($gp['iddetalle_plan']); ?></td>
                     <td><?php echo($gp['planes_nutri_idplanes_nutri']); ?></td>
                     <td><?php echo($gp['plan']); ?></td>
                     <td><?php echo($gp['lunes']); ?></td>
@@ -50,8 +52,8 @@ session_start();
                         <?php
                         if (isset($_SESSION['Adm'])) {
 
-                            echo('<a href="" class="btn-btn-danger" >Eliminar</a>');
-                            echo('<a href="" class="btn-btn-modi" >Modificar</a>');
+                            echo('<a href="index.php?c=Admin&a=eliminarPlanesDetallados&id='. $gp['iddetalle_plan']. ' " class="btn-btn-danger" >Eliminar</a>');
+                            echo('<a href="index.php?c=Admin&a=mostrarIdDetalle&id='. $gp['iddetalle_plan']. ' " class="btn-btn-modi" >Modificar</a>');
                         } elseif (isset($_SESSION['Client'])) {
                             echo('<a href="" class="btn-btn-danger">Eliminar</a>');
                             
