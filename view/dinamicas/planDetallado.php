@@ -11,7 +11,7 @@ session_start();
             <a href="index.php?c=index&c=Cliente&a=verPlanes" class="btn-btn-info">   Atras   </a>
             <?php
                 if (isset($_SESSION['Adm'])) {
-                    echo('<a href="index.php?c=Admin&a=mostrar" class="btn-btn-primary">   Crear   </a>');
+                    echo('<a href="index.php?c=Admin&a=mostrarPlanesDetallados" class="btn-btn-primary">   Crear   </a>');
                    
                 } elseif (isset($_SESSION['Client'])) {
                    
@@ -21,6 +21,7 @@ session_start();
             <br></br>
             <tr >
                 <th>Id Plan</th>
+                <th>Plan</th>
                 <th>Lunes</th>
                 <th>Martes</th>
                 <th>Miercoles</th>
@@ -36,6 +37,7 @@ session_start();
                 ?>
                 <tr>
                     <td><?php echo($gp['planes_nutri_idplanes_nutri']); ?></td>
+                    <td><?php echo($gp['plan']); ?></td>
                     <td><?php echo($gp['lunes']); ?></td>
                     <td><?php echo($gp['martes']); ?></td>
                     <td><?php echo($gp['miercoles']); ?></td>

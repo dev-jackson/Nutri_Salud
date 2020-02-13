@@ -3,6 +3,7 @@
 require_once'config/config.php';
 require_once 'model/DAO/PlanesDAO.php';
 require_once 'model/DTO/Planes.php';
+require_once 'model/DTO/PlanesDetallado.php';
 require_once 'model/DAO/AdminDAO.php';
 
 class AdminController {
@@ -25,6 +26,9 @@ class AdminController {
     public function mostrar() {
         require_once 'view/dinamicas/planesViewEdit.php';
 }
+    public function mostrarPlanesDetallados(){
+        require_once 'view/dinamicas/planDetalladoEdit.php';
+    }
 
     public function mostrarid(){
         $plan = new AdminDAO();
@@ -58,13 +62,33 @@ class AdminController {
         
         if(isset($_REQUEST['id']) && !empty($_REQUEST['id'])){
             $plan->setId($_REQUEST['id']);
-            $res = $this->admin->updatePlanes($plan);
+            $respuesta = $this->admin->updatePlanes($plan);
         }else{
             $respuesta = $this->admin->addPlanes($plan);
         }
         header('Location:index.php?c=Admin&a=mostrarPlanes');
     }
-    
+    public function guardarPlanDetallado(){
+        $planDetalle = new PlanesDetallado();
+        $planDetalle->setIdplaNutri($_REQUEST['id_plan']);
+        $planDetalle->setPLan($_REQUEST['plan']);
+        $planDetalle->setLunes($_REQUEST['lunes']);
+        $planDetalle->setMartes($_REQUEST['martes']);
+        $planDetalle->setMiercoles($_REQUEST['miercoles']);
+        $planDetalle->setJueves($_REQUEST['jueves']);
+        $planDetalle->setViernes($_REQUEST['viernes']);
+        $planDetalle->setSabado($_REQUEST['sabado']);
+        $planDetalle->setDomingo($_REQUEST['domingo']);
+        
+        if(isset($_REQUEST['idPlanDetallado']) && !empty($_REQUEST['idPlanDetallado'])){
+            $planDetalle->setIdPlanDetallado($_REQUEST['idPlanDetallado']);
+            $respuesta = $this->admin;
+        }else{
+            $respuesta = $this->admin->addPlanesDetallados($planDetalle);
+        }
+        header('Location:index.php?c=Admin&a=mostrarDetallePlan');
+    }
+
     public function mostrarDetallePlan(){
         require_once HEADER;
         $resultado = $this->planes->planesDetalles();

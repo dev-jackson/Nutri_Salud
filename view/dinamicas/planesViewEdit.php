@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
         <link rel="stylesheet" href="assets/css/index.css">
-        <title>Inicio de Sesion</title>
+        <title>Nutricionista</title>
     </head>
     <body>
         <div class="container-planes">
