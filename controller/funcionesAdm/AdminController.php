@@ -90,7 +90,7 @@ class AdminController {
 
     public function guardarPlanDetallado() {
         $planDetalle = new PlanesDetallado();
-        $planDetalle->setIdplaNutri($_REQUEST['id_plan']);
+//        $planDetalle->setIdplanNutri($_REQUEST['idplanNutri']);
         $planDetalle->setPLan($_REQUEST['plan']);
         $planDetalle->setLunes($_REQUEST['lunes']);
         $planDetalle->setMartes($_REQUEST['martes']);

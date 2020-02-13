@@ -16,7 +16,7 @@
                 <input type="hidden" name="idPlanDetallado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idPlanDetallado : ''; ?>"/>
                 <div class="form-group">
                     <label>Id Plan</label>
-                    <input type="text" name="idplan" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idplaNutri : ''; ?> "/>
+                    <input type="text" name="idplanNutri" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idplanNutri : ''; ?> "/>
                 </div>
                 <div class="form-group">
                     <label>Plan</label>

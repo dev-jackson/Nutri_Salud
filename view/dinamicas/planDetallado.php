@@ -20,7 +20,7 @@ session_start();
             
             <br></br>
             <tr >
-                <th>Id </th>
+                <!--<th>Id </th>-->
                 <th>Id Plan</th>
                 <th>Plan</th>
                 <th>Lunes</th>
@@ -37,7 +37,7 @@ session_start();
             foreach ($resultado as $gp):
                 ?>
                 <tr>
-                    <td><?php echo($gp['iddetalle_plan']); ?></td>
+<!--                    <td>< ?php echo($gp['iddetalle_plan']); ?></td>-->
                     <td><?php echo($gp['planes_nutri_idplanes_nutri']); ?></td>
                     <td><?php echo($gp['plan']); ?></td>
                     <td><?php echo($gp['lunes']); ?></td>

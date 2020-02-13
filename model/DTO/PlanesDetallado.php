@@ -3,7 +3,7 @@
 
 class PlanesDetallado {
     private $idPlanDetallado;
-    private $idplaNutri;
+    private $idplanNutri;
     private $plan;
     private $lunes;
     private $martes;
@@ -83,12 +83,12 @@ class PlanesDetallado {
     function setDomingo($domingo) {
         $this->domingo = $domingo;
     }
-    function getIdplaNutri() {
-        return $this->idplaNutri;
+    function getIdplanNutri() {
+        return $this->idplanNutri;
     }
 
-    function setIdplaNutri($idplaNutri) {
-        $this->idplaNutri = $idplaNutri;
+    function setIdplanNutri($idplanNutri) {
+        $this->idplanNutri = $idplanNutri;
     }
 
 

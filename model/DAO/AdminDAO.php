@@ -28,6 +28,7 @@ class AdminDAO {
             $sql = $this->con->prepare("INSERT INTO detalle_plan(plan,lunes,martes,miercoles,jueves,viernes,sabado,domingo)"
                     . "VALUES (?,?,?,?,?,?,?,?)");
             $sql->execute(array(
+//                $planD->getIdplanNutri(),
                 $planD->getPLan(),
                 $planD->getLunes(),
                 $planD->getMartes(),
