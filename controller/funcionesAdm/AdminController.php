@@ -28,6 +28,8 @@ class AdminController {
     }
 
     public function mostrarPlanesDetallados() {
+        $tipoPlan = new PlanesDAO();
+        $tipoP = $tipoPlan->getPlanesAll();
         require_once 'view/dinamicas/planDetalladoEdit.php';
     }
 
@@ -40,7 +42,8 @@ class AdminController {
     }
 
     public function mostrarIdDetalle() {
-
+        $tipoPlan = new PlanesDAO();
+        $tipoP = $tipoPlan->getPlanesAll();
         $DetalleEdit = $this->admin->mostrarDetallexId($_REQUEST['id']);
         require_once 'view/dinamicas/planDetalladoEdit.php';
     }
@@ -105,8 +108,9 @@ class AdminController {
 
         if (isset($_REQUEST['idPlanDetallado']) && !empty($_REQUEST['idPlanDetallado'])) {
             $planDetalle->setIdPlanDetallado($_REQUEST['idPlanDetallado']);
-            $respuesta = $this->admin->addPlanesDetallados($planDetalle);
+            $respuesta = $this->admin->updatePplanesDetalles($planDetalle);
         } else {
+            echo '1';
             $respuesta = $this->admin->addPlanesDetallados($planDetalle);
         }
         header('Location:index.php?c=Admin&a=mostrarDetallePlan');

@@ -13,11 +13,28 @@
             <form action="index.php?c=Admin&a=guardarPlanDetallado" method="post">
                 <img src="assets/imagenes/logo.png" alt="">
                 <h2>registro de plan Detallado</h2>
-                <input type="hidden" name="idPlanDetallado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->iddetalle_plan : '';  ?>"/>
+                <input type="hidden" name="idPlanDetallado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->iddetalle_plan : ''; ?>"/>
+                <!--                <div class="form-group">
+                                    <label>Id Plan</label>
+                                    <input type="text" size="40" name="idplanNutri" value="< ?php echo isset($DetalleEdit) ? $DetalleEdit->planes_nutri_idplanes_nutri : ''; ?>"/>
+                
+                                </div>-->
                 <div class="form-group">
-                    <label>Id Plan</label>
-                    <input type="text" size="40" name="idplanNutri" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->planes_nutri_idplanes_nutri : ''; ?>"/>
-
+                    <label>Tipo</label>
+                    <select name="idplanNutri"  class="form-control">
+                        <option value="0" >seleccionar</option>
+                        <?php foreach ($tipoP as $tipos) {?>
+                            <option value="<?php echo $tipos['idplanes_nutri']; ?>"
+                            <?php
+                            if (isset($DetalleEdit)) {
+                                if ($tipos['idplanes_nutri'] == $DetalleEdit->planes_nutri_idplanes_nutri) {
+                                    echo 'selected';
+                                }
+                            }
+                            ?>    
+                                    ><?php echo $tipos['nombre']; ?></option>
+                                <?php }?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Plan</label>
@@ -49,7 +66,7 @@
                 </div>
                 <div class="form-group">
                     <label>Domingo</label>
-                    
+
                     <input type="textarea" size="45" name="domingo" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->domingo : ''; ?>"/>
                 </div>
                 <div class="text-center">
