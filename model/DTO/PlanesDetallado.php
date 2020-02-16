@@ -2,8 +2,8 @@
 
 
 class PlanesDetallado {
-    private $idPlanDetallado;
-    private $idplanNutri;
+    private $iddetalle_plan;
+    private $planes_nutri_idplanes_nutri;
     private $plan;
     private $lunes;
     private $martes;
@@ -13,7 +13,7 @@ class PlanesDetallado {
     private $sabado;
     private $domingo;
     function getIdPlanDetallado() {
-        return $this->idPlanDetallado;
+        return $this->iddetalle_plan;
     }
 
     function getPLan() {
@@ -49,7 +49,7 @@ class PlanesDetallado {
     }
 
     function setIdPlanDetallado($idPlanDetallado) {
-        $this->idPlanDetallado = $idPlanDetallado;
+        $this->iddetalle_plan = $idPlanDetallado;
     }
 
     function setPLan($plan) {
@@ -84,11 +84,11 @@ class PlanesDetallado {
         $this->domingo = $domingo;
     }
     function getIdplanNutri() {
-        return $this->idplanNutri;
+        return $this->planes_nutri_idplanes_nutri;
     }
 
     function setIdplanNutri($idplanNutri) {
-        $this->idplanNutri = $idplanNutri;
+        $this->planes_nutri_idplanes_nutri = $idplanNutri;
     }
 
 

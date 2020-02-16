@@ -2,13 +2,13 @@
 
 class Planes {
 
-    private $id;
+    private $idplanes_nutri;
     private $nombre;
     private $descripcion;
     
 
-    function getId() {
-        return $this->id;
+    function getIdP() {
+        return $this->idplanes_nutri;
     }
 
     function getNombre() {
@@ -19,8 +19,8 @@ class Planes {
         return $this->descripcion;
     }
 
-    function setId($id) {
-        $this->id = $id;
+    function setIdP($idP) {
+        $this->idplanes_nutri = $idP;
     }
 
     function setNombre($nombre) {

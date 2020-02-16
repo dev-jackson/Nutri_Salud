@@ -25,10 +25,10 @@ class AdminDAO {
 
     public function addPlanesDetallados(PlanesDetallado $planD) {
         try {
-            $sql = $this->con->prepare("INSERT INTO detalle_plan(plan,lunes,martes,miercoles,jueves,viernes,sabado,domingo)"
-                    . "VALUES (?,?,?,?,?,?,?,?)");
+            $sql = $this->con->prepare("INSERT INTO detalle_plan(planes_nutri_idplanes_nutri,plan,lunes,martes,miercoles,jueves,viernes,sabado,domingo)"
+                    . "VALUES (?,?,?,?,?,?,?,?,?)");
             $sql->execute(array(
-//                $planD->getIdplanNutri(),
+                $planD->getIdplanNutri(),
                 $planD->getPLan(),
                 $planD->getLunes(),
                 $planD->getMartes(),
@@ -46,9 +46,11 @@ class AdminDAO {
     public function mostrarxId($id) {
         $sql = "select * from planes_nutri where idplanes_nutri = ?";
         $sen = $this->con->prepare($sql);
+        
         $par = array($id);
         $sen->execute($par);
         $res = $sen->fetch(PDO::FETCH_OBJ);
+        echo (json_encode($res));
         return $res;
     }
     
@@ -68,7 +70,29 @@ class AdminDAO {
             $sentencia = $this->con->prepare($sql);
             $par = array($p->getNombre(),
                 $p->getDescripcion(),
-                $p->getId());
+                $p->getIdP());
+            $sentencia->execute($par);
+            $res = $sentencia->rowCount();
+            return $res;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    public function updatePplanesDetalles(PlanesDetallado $det){
+         try {
+
+            $sql = "UPDATE detalle_plan SET planes_nutri_idplanes_nutri= ?, plan= ?,lunes=?,martes=?,miercoles=?,jueves=?,viernes=?,sabado=?,domingo=? where iddetalle_plan= ? ";
+            $sentencia = $this->con->prepare($sql);
+            $par = array($det->getIdplanNutri(),
+                $det->getPLan(),
+                $det->getLunes(),
+                $det->getMartes(),
+                $det->getMiercoles(),
+                $det->getJueves(),
+                $det->getViernes(),
+                $det->getSabado(),
+                $det->getDomingo(),
+                $det->getIdPlanDetallado());
             $sentencia->execute($par);
             $res = $sentencia->rowCount();
             return $res;

@@ -10,17 +10,19 @@
     </head>
     <body>
         <div class="container-planes">
-            <form action="index.php?c=Admin&a=guardar" method="post">
+            <form action="index.php?c=Admin&a=guardar" method="POST">
                 <img src="assets/imagenes/logo.png" alt="">
                 <h2>registro del plan</h2>
-                <input type="hidden" name="id" value="<?php echo isset($planedit) ? $planedit->id : ''; ?>"/>
+                <div class="form-group">
+                    <input type="hidden" name="id" value="<?php echo isset($planedit) ? $planedit->idplanes_nutri : ''; ?>"/>
+                </div>
                 <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" name="nombre" value="<?php echo isset($planedit) ? $planedit->nombre : ''; ?> "/>
+                    <input type="text" name="nombre" value="<?php echo isset($planedit) ? $planedit->nombre : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Descripcion</label>
-                    <input type="text" name="descripcion" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?> "/>
+                    <input type="text" name="descripcion" value="<?php echo isset($planedit) ? $planedit->descripcion : ''; ?>"/>
                 </div>
                 <div class="text-center">
                     <input type="submit" value="Guardar">

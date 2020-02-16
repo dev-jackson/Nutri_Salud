@@ -13,44 +13,44 @@
             <form action="index.php?c=Admin&a=guardarPlanDetallado" method="post">
                 <img src="assets/imagenes/logo.png" alt="">
                 <h2>registro de plan Detallado</h2>
-                <input type="hidden" name="idPlanDetallado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idPlanDetallado : ''; ?>"/>
+                <input type="hidden" name="idPlanDetallado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->iddetalle_plan : '';  ?>"/>
                 <div class="form-group">
                     <label>Id Plan</label>
-                    <input type="text" name="idplanNutri" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->idplanNutri : ''; ?> "/>
+                    <input type="text" size="40" name="idplanNutri" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->planes_nutri_idplanes_nutri : ''; ?>"/>
 
                 </div>
                 <div class="form-group">
                     <label>Plan</label>
-                    <input type="text" size="40" name="plan" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->plan : ''; ?> "/>
+                    <input type="text" size="40" name="plan" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->plan : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Lunes</label>
-                    <input type="text" size="45" name="lunes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->lunes : ''; ?> "/>
+                    <input type="text" size="45" name="lunes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->lunes : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Martes</label>
-                    <input type="text" size="45" name="martes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->martes : ''; ?> "/>
+                    <input type="text" size="45" name="martes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->martes : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Miercoles</label>
-                    <input type="text" size="45" name="miercoles" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->miercoles : ''; ?> "/>
+                    <input type="text" size="45" name="miercoles" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->miercoles : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Jueves</label>
-                    <input type="text" size="45" name="jueves" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->jueves : ''; ?> "/>
+                    <input type="text" size="45" name="jueves" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->jueves : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Viernes</label>
-                    <input type="text" size="45" name="viernes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->viernes : ''; ?> "/>
+                    <input type="text" size="45" name="viernes" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->viernes : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Sabado</label>
-                    <input type="text" size="45" name="sabado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->sabado : ''; ?> "/>
+                    <input type="text" size="45" name="sabado" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->sabado : ''; ?>"/>
                 </div>
                 <div class="form-group">
                     <label>Domingo</label>
                     
-                    <input type="textarea" size="45" name="domingo" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->domingo : ''; ?> "/>
+                    <input type="textarea" size="45" name="domingo" value="<?php echo isset($DetalleEdit) ? $DetalleEdit->domingo : ''; ?>"/>
                 </div>
                 <div class="text-center">
                     <input type="submit" value="Guardar">

@@ -38,11 +38,11 @@ class AdminController {
         REQUIRE_ONCE 'view/dinamicas/planesViewEdit.php';
 //        REQUIRE_ONCE FOOTER;
     }
-    public function mostrarIdDetalle(){
-        
+
+    public function mostrarIdDetalle() {
+
         $DetalleEdit = $this->admin->mostrarDetallexId($_REQUEST['id']);
         require_once 'view/dinamicas/planDetalladoEdit.php';
-        
     }
 
     public function eliminar() {
@@ -71,18 +71,21 @@ class AdminController {
     }
 
     public function guardar() {
+        echo('1');
         if (!isset($_POST['nombre']) || empty($_POST['nombre'])) {
             $_SESSION['mensaje'] = "Debe ingresar nombre";
             header('Location:index.php?c=Admin&a=mostrarPlanes');
+            echo('1');
         }
         $plan = new Planes();
         $plan->setNombre($_POST['nombre']);
         $plan->setDescripcion($_POST['descripcion']);
 
         if (isset($_REQUEST['id']) && !empty($_REQUEST['id'])) {
-            $plan->setId($_REQUEST['id']);
+            $plan->setIdP($_REQUEST['id']);
             $respuesta = $this->admin->updatePlanes($plan);
         } else {
+            echo('2');
             $respuesta = $this->admin->addPlanes($plan);
         }
         header('Location:index.php?c=Admin&a=mostrarPlanes');
@@ -90,7 +93,7 @@ class AdminController {
 
     public function guardarPlanDetallado() {
         $planDetalle = new PlanesDetallado();
-//        $planDetalle->setIdplanNutri($_REQUEST['idplanNutri']);
+        $planDetalle->setIdplanNutri($_REQUEST['idplanNutri']);
         $planDetalle->setPLan($_REQUEST['plan']);
         $planDetalle->setLunes($_REQUEST['lunes']);
         $planDetalle->setMartes($_REQUEST['martes']);
@@ -102,7 +105,7 @@ class AdminController {
 
         if (isset($_REQUEST['idPlanDetallado']) && !empty($_REQUEST['idPlanDetallado'])) {
             $planDetalle->setIdPlanDetallado($_REQUEST['idPlanDetallado']);
-            $respuesta = $this->admin;
+            $respuesta = $this->admin->addPlanesDetallados($planDetalle);
         } else {
             $respuesta = $this->admin->addPlanesDetallados($planDetalle);
         }
